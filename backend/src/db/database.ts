@@ -10,6 +10,4 @@ const conn = async () => {
   console.log(ck.green("Conectado ao mongoose"));
 };
 
-conn().catch((err) => console.log(ck.red("Algo deu ruim,", err)));
-
 export default conn;

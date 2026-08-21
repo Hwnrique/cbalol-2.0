@@ -5,17 +5,14 @@ import ck from "chalk";
 import router from "./routes/authRoutes.js";
 import noticeRouter from "./routes/noticeRoutes.js";
 import commentRouter from "./routes/commentRoutes.js";
-import timeRouter from "./routes/timeRoutes.js"
+import timeRouter from "./routes/timeRoutes.js";
 import jogadorRouter from "./routes/jogadorRoutes.js";
-import cors from "cors"
+import cors from "cors";
 import partidaRouter from "./routes/partidaRoutes.js";
 import mvpRouter from "./routes/mvpRoutes.js";
 
-
 const app = express();
-app.use(cors({
-  origin: "http://localhost:5173"
-}))
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.use("/", noticeRouter);
@@ -31,7 +28,7 @@ const startSever = async () => {
   try {
     await conn();
     app.listen(port, () => {
-      console.log(ck.green("Servidor ativo!"));
+      console.log(ck.green(`Servidor ativo na porta ${port}`));
     });
   } catch (error) {
     console.log(error);
