@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  display: none !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  width: auto !important;
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: transparent !important;
+  border-radius: 999px !important;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,.7) !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff !important;
+  width: 35px !important;
+  height: 8px !important;
+  border-radius: 999px !important;
+}
+
+.teamSwiper .swiper-pagination-bullet {
+  display: none;
+}
+
+.partidas-prev.swiper-button-disabled,
+.partidas-next.swiper-button-disabled {
+    opacity: .60;
+    cursor: no-drop;
+}
+
+
+@media(max-width: 768px) {
+  .swiper-pagination {
+  position: absolute !important;
+  top: 230px !important;
+  right: 20px !important;
+  left: auto !important;
+  width: auto !important;
+}
+}
+
+@media(max-width: 425px) {
+  .swiper-pagination {
+  position: absolute !important;
+  top: 195px !important;
+  right: 20px !important;
+  left: auto !important;
+  width: auto !important;
+}
+}
+
+.ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 12px 0;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #d1d5db;
+}
+
+.ProseMirror p {
+  margin: 8px 0;
+  color: #d1d5db;
+}
+
+.ProseMirror strong {
+  color: white;
+  font-weight: bold;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
