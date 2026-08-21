@@ -6,8 +6,11 @@ const conn = async () => {
     throw new Error("Erro na requisição da URI");
   }
 
-  await mongoose.connect(process.env.MONGO_URI);
+  const connection = await mongoose.connect(process.env.MONGO_URI);
+
   console.log(ck.green("Conectado ao mongoose"));
+  console.log("Banco conectado:", connection.connection.name);
+  console.log("Host:", connection.connection.host);
 };
 
 export default conn;
