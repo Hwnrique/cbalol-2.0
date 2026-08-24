@@ -14,7 +14,6 @@ export default class PartidaController {
   static async show(req: Request, res: Response) {
     try {
       const { status } = req.query as { status?: string };
-      // parâmetro pra filtrar as partidas pelo status
       const resultado = await PartidaService.show(status);
       res.status(200).json(resultado);
     } catch (error) {

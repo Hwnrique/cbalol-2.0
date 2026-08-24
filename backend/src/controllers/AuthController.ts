@@ -8,8 +8,6 @@ export default class AuthController {
       res.status(201).json(resultado);
     } catch (error) {
       error instanceof Error && res.status(400).json(error.message);
-      // verificando se o error é uma instacia do throw new Error do service, se sim, retorna a mensagem
-      // de erro escrita lá
     }
   }
 

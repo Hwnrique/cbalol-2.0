@@ -32,7 +32,6 @@ const JogadorModal = ({ jogadorId, onClose }: JogadorModalProps) => {
     }
   };
 
-  // fecha o modal ao pressionar ESC
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -41,7 +40,6 @@ const JogadorModal = ({ jogadorId, onClose }: JogadorModalProps) => {
     return () => document.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
-  // bloqueia o scroll da página quando o modal está aberto
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {

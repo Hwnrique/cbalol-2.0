@@ -9,27 +9,21 @@ interface AuthContextType {
   login: (token: string) => void;
   logout: () => void;
 }
-// criando interface pro contexto
 
 interface TokenPayload {
   id: string;
   adm: boolean;
   nickname: string;
 }
-// criando typagem para os dados que vem do payload
 
 interface AuthProviderProps {
   children: React.ReactNode;
 }
-// tipando o children
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  // para evitar que dados se percam ao atualizar a página, vamos criar
-  // valores iniciais para os useStates
   const storedToken = localStorage.getItem("token") ?? "";
-  // buscando token do localStorage
 
   const storedPayload = storedToken ? (() => {
   try {
@@ -53,8 +47,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setId(payload.id);
     setNickname(payload.nickname);
     setAdm(payload.adm);
-    // aqui nós pegamos o token pra validar o login
-    // e atualizados os dados dos Sets com o dado inserido no payload
   };
 
   const logout = () => {
@@ -63,7 +55,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setAdm(false);
     setId("");
     setNickname("");
-    // ao deslogar, limpamos todos os campos e removemos o token que pegamos no login
   };
 
   return (

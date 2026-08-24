@@ -1,7 +1,6 @@
 import Notice from "../models/Notice.js";
 
 type CreateNoticeData = Omit<Notice, "criadaPor" | "curtidas">;
-// type fala pra gente o que vem do front na hora de criar uma noticia
 
 export default class NoticeService {
   static async create(data: CreateNoticeData, userId: string) {
@@ -15,7 +14,6 @@ export default class NoticeService {
       criadaPor: userId,
       curtidas: [],
     };
-    // isso fala pra gente o que vai pro backend, são necessários todos os campos
 
     const criarNoticia = await Notice.create(notice);
     return criarNoticia;
@@ -23,7 +21,6 @@ export default class NoticeService {
 
   static async show() {
     const notices = await Notice.find().lean();
-    // o .lean() remove tudo que é desnecessário e retorna só os dados — mais leve e rápido.
 
     return notices;
   }
@@ -32,7 +29,6 @@ export default class NoticeService {
     const notice = await Notice.findById(noticeId)
       .populate("criadaPor", "nickname userPhoto")
       .lean();
-      // usamos o populate pra trazer os dados do autor da notícia
 
     return notice;
   }
@@ -56,8 +52,6 @@ export default class NoticeService {
     const updateNotice = await Notice.findByIdAndUpdate(noticeId, notice, {
       returnDocument: "after",
     });
-    // passamos o returnDocument: "after" pra retornar o documento atualizado, sem isso ele retorna
-    // o documento antes da att
 
     return updateNotice;
   }
@@ -70,7 +64,6 @@ export default class NoticeService {
     }
 
     const liked = notice.curtidas.some((id) => id.toString() === userId);
-    // O array curtidas é de ObjectId, aqui nós convertemos ele pra uma string
 
     if (liked) {
       await Notice.findByIdAndUpdate(noticeId, { $pull: { curtidas: userId } });
@@ -80,8 +73,6 @@ export default class NoticeService {
     await Notice.findByIdAndUpdate(noticeId, {
       $addToSet: { curtidas: userId },
     });
-    // substituí o push pelo addToSet por ser mais seguro, o push as vezes pode duplicar a curtida
-    // com o addToSet não corro esse risco
 
     return "curtiu";
   }

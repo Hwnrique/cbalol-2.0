@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { BiCamera } from "react-icons/bi";
 
 interface ImageUploadProps {
-  onChange: (url: string) => void; // função que passa a url pro formulario
+  onChange: (url: string) => void;
   label: string;
   value?: string
 }

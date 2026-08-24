@@ -13,8 +13,8 @@ export default class TimeController {
 
   static async show(req: Request, res: Response) {
     try {
-      const { ativo } = req.query as { ativo?: string }; // faltou isso!
-      const resultado = await TimeService.show(ativo); // e passar aqui!
+      const { ativo } = req.query as { ativo?: string };
+      const resultado = await TimeService.show(ativo);
       res.status(200).json(resultado);
     } catch (error) {
       error instanceof Error && res.status(400).json(error.message);

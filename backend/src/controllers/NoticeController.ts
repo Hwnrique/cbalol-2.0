@@ -23,8 +23,6 @@ export default class NoticeController {
   static async showById(req: Request, res: Response) {
     try {
       const { id } = req.params as { id: string };
-      // pro typescript parar de reclamar a gente usa o as de novo
-      // pois ele tem dificuldade de entender que essa merda é uma string, e nao undefined
       const resultado = await NoticeService.showById(id);
       res.status(200).json(resultado);
     } catch (error) {
@@ -35,7 +33,6 @@ export default class NoticeController {
   static async delete(req: Request, res: Response) {
     try {
       const { id } = req.params as { id: string };
-      // faz a mesma merda idiota do de cima
       const resultado = await NoticeService.delete(id);
       res.status(200).json(resultado);
     } catch (error) {

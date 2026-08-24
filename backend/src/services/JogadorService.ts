@@ -25,8 +25,6 @@ export default class JogadorService {
         $addToSet: { jogadores: createJogador._id },
       });
     }
-    // validando e atualizando o Time
-    // Se o time for passado pro frontend ele atualiza a lista de jogadores do determinado time!
 
     return createJogador;
   }
@@ -88,7 +86,6 @@ export default class JogadorService {
     });
 
     const timeAtual = String(buscaTime ?? "");
-    // substituto pra .toString(), o TS aceita melhor
     const timeNovo = String(time ?? "");
 
     if (timeNovo && timeAtual !== timeNovo) {

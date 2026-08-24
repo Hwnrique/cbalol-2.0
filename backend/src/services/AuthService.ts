@@ -2,7 +2,6 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-// criando um type para remover somente uma key da interface original, no caso a adm.
 type ComumUser = Omit<User, "adm">;
 
 type loginData = {
@@ -12,10 +11,8 @@ type loginData = {
 
 export default class AuthService {
   static async cadastro(data: ComumUser) {
-    // desestruturando o User e definindo como data
     const { nickname, nome, email, senha, userPhoto } = data;
 
-    //verificando se o usuário já existe no banco
     const emailExiste = await User.findOne({ email: email });
     const nickExiste = await User.findOne({ nickname: nickname });
 
@@ -26,10 +23,8 @@ export default class AuthService {
       throw new Error("Esse nick já está em uso!");
     }
 
-    // criando senha codificada
     const hashedPassword = await bcrypt.hash(senha, 10);
 
-    // passando as propriedades necessárias para criação do usuário
     const user = {
       nickname,
       nome,
@@ -38,7 +33,6 @@ export default class AuthService {
       userPhoto,
     };
 
-    // função de criação do usuário
     const criarUser = await User.create(user);
 
     const { senha: _, ...userSemSenha } = criarUser.toObject();
