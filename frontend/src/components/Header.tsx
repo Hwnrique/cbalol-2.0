@@ -138,28 +138,16 @@ const Header = () => {
                   className="w-36 absolute top-[4.5rem] left-0 z-10 bg-[#14141b] rounded-lg shadow-black shadow-2xl flex flex-col p-2"
                 >
                   <Link
-                    to={"/cadastro"}
+                    to={"/about"}
                     className="p-2 font-bold text-lg hover:text-white hover:bg-[#1b1b26] rounded-lg"
                   >
                     Sobre nós
                   </Link>
                   <Link
-                    to={"/login"}
-                    className="p-2 font-bold text-lg hover:text-white hover:bg-[#1b1b26] rounded-lg"
-                  >
-                    Repórteres
-                  </Link>
-                  <Link
-                    to={"/"}
+                    to={"/moderadores"}
                     className="p-2 font-bold text-lg hover:text-white hover:bg-[#1b1b26] rounded-lg"
                   >
                     Moderadores
-                  </Link>
-                  <Link
-                    to={"/"}
-                    className="p-2 font-bold text-lg hover:text-white hover:bg-[#1b1b26] rounded-lg"
-                  >
-                    Redes Sociais
                   </Link>
                 </div>
               )}

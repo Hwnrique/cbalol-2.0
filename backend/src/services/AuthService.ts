@@ -79,6 +79,14 @@ export default class AuthService {
     return users;
   }
 
+static async showAdmins() {
+  const users = await User.find({ adm: true })
+    .select("-senha")
+    .lean();
+
+  return users;
+}
+
   static async update(userId: string, data: ComumUser) {
     const { nickname, nome, userPhoto } = data;
 

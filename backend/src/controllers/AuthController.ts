@@ -30,6 +30,18 @@ export default class AuthController {
     }
   }
 
+  static async showAdmins(req: Request, res: Response) {
+  try {
+    const users = await AuthService.showAdmins();
+
+    return res.status(200).json(users);
+  } catch (error) {
+    return res.status(500).json({
+      message: "Erro ao buscar moderadores",
+    });
+  }
+}
+
     static async update(req: Request, res: Response) {
       try {
         const { id } = req.params as { id: string };

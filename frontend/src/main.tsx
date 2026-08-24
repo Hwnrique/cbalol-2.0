@@ -26,6 +26,8 @@ import PrivateRoute from "./components/PrivateRoute.tsx";
 import UserEdit from "./pages/UserEdit.tsx";
 import PartidaEdit from "./pages/PartidaEdit.tsx";
 import MVPEdit from "./pages/MVPEdit.tsx";
+import About from "./pages/AboutUs.tsx";
+import Moderadores from "./pages/Moderadores.tsx";
 
 
 const queryClient = new QueryClient();
@@ -110,6 +112,14 @@ const router = createBrowserRouter([
       {
         path: "/user/edit/:id",
         element: <PrivateRoute><UserEdit /></PrivateRoute>
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/moderadores",
+        element: <Moderadores />
       }
     ],
   },
