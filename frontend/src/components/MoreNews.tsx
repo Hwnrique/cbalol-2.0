@@ -54,13 +54,20 @@ const MoreNews = ({ news }: { news: any[] }) => {
         </div>
       </div>
       <div className="lg:hidden w-[80%] mx-auto mt-10 space-y-4">
-        {news.slice(0, 3).map((item) => (
+        {news.slice(0, 3).map((item) => {
+
+          const resumoTitleFromMobile =
+          item.titulo.length > 50
+            ? item.titulo.slice(0, 50) + "..."
+            : item.titulo;
+
+          return (
           <div
             key={item._id}
             className="bg-zinc-900 rounded-xl overflow-hidden relative"
           >
             <div className="p-2 flex flex-col justify-end absolute inset-0 bg-gradient-to-t from-bgsite/80 via-bgsite/40 to-transparent">
-              <h2 className="text-gray-300 font-black mb-2 text-xl">{item.titulo}</h2>
+              <h2 className="text-gray-300 font-black mb-2 text-xl">{resumoTitleFromMobile}</h2>
               <Link to={`/notice/${item._id}`}>
               <div className="text-gray-300 hover:text-white bg-cyan-950 rounded-md hover:bg-cyan-900 text-sm cursor-pointer font-bold flex w-20 h-10 justify-center items-center">
                   <p>Ler mais</p>
@@ -73,7 +80,8 @@ const MoreNews = ({ news }: { news: any[] }) => {
               className="w-full h-48 object-cover"
             />
           </div>
-        ))}
+          )
+        })}
       </div>
     </>
   );
