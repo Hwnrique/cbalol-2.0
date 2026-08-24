@@ -143,7 +143,7 @@ const MobileSidebar = ({
           {mobileEquipe && (
             <div className="bg-[#1b1b26]">
               <Link
-                to="/cadastro"
+                to="/about"
                 onClick={closeSidebar}
                 className="block pl-10 py-3"
               >
@@ -151,25 +151,11 @@ const MobileSidebar = ({
               </Link>
 
               <Link
-                to="/login"
-                onClick={closeSidebar}
-                className="block pl-10 py-3"
-              >
-                Repórteres
-              </Link>
-              <Link
-                to="/login"
+                to="/moderadores"
                 onClick={closeSidebar}
                 className="block pl-10 py-3"
               >
                 Moderadores
-              </Link>
-              <Link
-                to="/login"
-                onClick={closeSidebar}
-                className="block pl-10 py-3"
-              >
-                Redes Sociais
               </Link>
             </div>
           )}
