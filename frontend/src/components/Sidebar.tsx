@@ -62,7 +62,7 @@ const MobileSidebar = ({
       >
         <div className="p-6 border-b border-authPainel">
           <div className="w-16 h-16 rounded-full bg-slate-700 flex items-center justify-center">
-            <img src={user?.userPhoto} alt="foto de perfil" className="rounded-full"/>
+            <img src={user?.userPhoto} alt="foto de perfil" className="rounded-full h-16 w-16"/>
           </div>
           <h2 className="text-white font-bold mt-3">
             {nickname}
@@ -264,7 +264,7 @@ const MobileSidebar = ({
           {mobileEquipe && (
             <div className="bg-[#1b1b26]">
               <Link
-                to="/cadastro"
+                to="/about"
                 onClick={closeSidebar}
                 className="block pl-10 py-3"
               >
@@ -272,25 +272,11 @@ const MobileSidebar = ({
               </Link>
 
               <Link
-                to="/login"
-                onClick={closeSidebar}
-                className="block pl-10 py-3"
-              >
-                Repórteres
-              </Link>
-              <Link
-                to="/login"
+                to="/moderadores"
                 onClick={closeSidebar}
                 className="block pl-10 py-3"
               >
                 Moderadores
-              </Link>
-              <Link
-                to="/login"
-                onClick={closeSidebar}
-                className="block pl-10 py-3"
-              >
-                Redes Sociais
               </Link>
             </div>
           )}
