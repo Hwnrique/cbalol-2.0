@@ -113,7 +113,7 @@ const Jogadores = () => {
                   className="w-20 h-20 rounded-full object-cover border-2 border-gray-700"
                 />
                 <div className="text-center">
-                  <p className="text-white font-bold">{jogador.nome}</p>
+                  <p className="text-white font-bold">{jogador.nickname}</p>
                   <p className="text-gray-500 text-sm">{jogador.role}</p>
                 </div>
               </div>
