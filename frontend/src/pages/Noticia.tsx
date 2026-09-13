@@ -221,7 +221,7 @@ const Noticia = () => {
                   <img
                     src={c.criadoPor?.userPhoto}
                     alt={c.criadoPor?.nickname}
-                    className="h-8 rounded-full"
+                    className="h-8 w-8 rounded-full"
                   />
                   <p className="text-cyan-900 font-bold text-base mb-1">
                     {c.criadoPor?.nickname ?? "Usuário"}
