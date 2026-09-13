@@ -223,71 +223,6 @@ A aplicação implementa diferentes mecanismos de segurança:
 
 ---
 
-## 🚀 Executando localmente
-
-### Pré-requisitos
-
-Você precisará ter instalado:
-
-* Node.js 18+
-* npm
-* MongoDB local ou MongoDB Atlas
-* Conta no Cloudinary
-
-### 1. Clone o projeto
-
-```bash
-git clone URL_DO_REPOSITORIO
-cd CBALOL
-```
-
-### 2. Backend
-
-```bash
-cd backend
-npm install
-```
-
-Crie o arquivo `.env`:
-
-```env
-PORT=3000
-MONGO_URI=sua_connection_string
-JWT_SECRET=sua_chave_secreta
-```
-
-Execute:
-
-```bash
-npm run dev
-```
-
-### 3. Frontend
-
-Em outro terminal:
-
-```bash
-cd frontend
-npm install
-```
-
-Configure as variáveis necessárias no `.env`:
-
-```env
-VITE_CLOUDINARY_CLOUD_NAME=seu_cloud_name
-VITE_CLOUDINARY_UPLOAD_PRESET=seu_upload_preset
-```
-
-Execute:
-
-```bash
-npm run dev
-```
-
-A aplicação estará disponível no endereço informado pelo Vite.
-
----
-
 ## API
 
 A API REST possui endpoints para gerenciamento dos principais recursos da plataforma:
@@ -389,13 +324,13 @@ Desenvolvedor Full-Stack responsável pelo desenvolvimento do projeto CBALOL 2.0
 
 O projeto foi criado como parte dos meus estudos em desenvolvimento de software e também como uma aplicação real para gerenciamento do campeonato.
 
-[LinkedIn](LINK_DO_LINKEDIN) • [GitHub](LINK_DO_GITHUB)
+[LinkedIn](www.linkedin.com/in/carloshenrique-jrdev) • [GitHub](https://github.com/Hwnrique)
 
 ---
 
 <div align="center">
 
-Desenvolvido com estudos, dedicação e algumas partidas de League of Legends.
+Desenvolvido para estudo pessoal e entreterimento da comunidade.
 
 **CBALOL 2.0**
 
