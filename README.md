@@ -12,13 +12,13 @@ Uma aplicação **Full-Stack** desenvolvida para gerenciamento, divulgação e a
 
 **React • TypeScript • Node.js • Express • MongoDB**
 
-[🌐 Acessar projeto](https://cbalol-2-0.vercel.app/)
+[Acessar projeto](https://cbalol-2-0.vercel.app/)
 
 </div>
 
 ---
 
-## 🎮 Sobre o projeto
+## Sobre o projeto
 
 O **CBALOL 2.0** é uma plataforma criada para centralizar as informações e o gerenciamento de um campeonato amador de League of Legends.
 
@@ -32,9 +32,11 @@ Administradores possuem acesso a ferramentas exclusivas para gerenciamento do co
 
 ---
 
-## 📸 Preview
+## Preview
 
-> Adicione aqui screenshots da Home, página de times, notícias e painel administrativo.
+![Home do CBALOL](./docs/images/Home.png)
+![Página de JogadoresL](./docs/images/Jogadores.png.png)
+![Time Las Noches](./docs/images/Home.png)
 
 ```text
 Home
@@ -46,9 +48,9 @@ Painel administrativo
 
 ---
 
-## ✨ Principais funcionalidades
+## Principais funcionalidades
 
-### 👤 Usuários
+### Usuários
 
 * Cadastro e autenticação com JWT
 * Senhas protegidas com bcrypt
@@ -56,7 +58,7 @@ Painel administrativo
 * Edição de perfil
 * Controle de permissões entre membros e administradores
 
-### 📰 Notícias
+### Notícias
 
 * Criação e edição de notícias
 * Editor de texto rico com TipTap
@@ -66,7 +68,7 @@ Painel administrativo
 * Notícias relacionadas
 * Sanitização de conteúdo HTML
 
-### 🏆 Times e jogadores
+### Times e jogadores
 
 * Cadastro e gerenciamento de equipes
 * Logo e banner personalizados
@@ -75,7 +77,7 @@ Painel administrativo
 * Busca e filtros
 * Página individual de cada equipe
 
-### ⚔️ Partidas
+### Partidas
 
 * Cadastro de confrontos
 * Formatos MD1, MD3 e MD5
@@ -83,14 +85,14 @@ Painel administrativo
 * Partidas pendentes e finalizadas
 * Ordenação automática por data
 
-### 🌟 MVP
+### MVP
 
 * Destaque de jogadores
 * Pontuação e descrição
 * Período configurável
 * Exibição automática do MVP vigente
 
-### 🛡️ Administração
+### Administração
 
 Administradores possuem acesso a funcionalidades exclusivas para gerenciamento de:
 
@@ -103,7 +105,7 @@ Administradores possuem acesso a funcionalidades exclusivas para gerenciamento d
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 ### Frontend
 
@@ -286,7 +288,7 @@ A aplicação estará disponível no endereço informado pelo Vite.
 
 ---
 
-## 📡 API
+## API
 
 A API REST possui endpoints para gerenciamento dos principais recursos da plataforma:
 
@@ -318,7 +320,7 @@ As operações de criação, atualização e exclusão de equipes exigem permiss
 
 ---
 
-## 🌐 Deploy
+## Deploy
 
 A aplicação utiliza uma infraestrutura distribuída:
 
@@ -350,20 +352,18 @@ Imagens
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 Funcionalidades planejadas para versões futuras:
 
 * [ ] Integração com a API da Riot Games
 * [ ] Estatísticas dos jogadores
 * [ ] Tabela de classificação automática
-* [ ] Login social com Discord
-* [ ] Notificações em tempo real
 * [ ] Automatização de dados do campeonato
 
 ---
 
-## 💡 O que aprendi com o projeto
+## O que aprendi com o projeto
 
 O desenvolvimento do CBALOL 2.0 envolveu diferentes conceitos utilizados em aplicações Full-Stack modernas, incluindo:
 
@@ -395,7 +395,7 @@ O projeto foi criado como parte dos meus estudos em desenvolvimento de software 
 
 <div align="center">
 
-Desenvolvido com 💙, ☕ e algumas partidas de League of Legends.
+Desenvolvido com estudos, dedicação e algumas partidas de League of Legends.
 
 **CBALOL 2.0**
 
