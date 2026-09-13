@@ -150,7 +150,7 @@ Administradores possuem acesso a funcionalidades exclusivas para gerenciamento d
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 O backend segue uma arquitetura em camadas, separando as responsabilidades da aplicação:
 
@@ -208,7 +208,7 @@ frontend/src/
 
 ---
 
-## 🔐 Segurança
+## Segurança
 
 A aplicação implementa diferentes mecanismos de segurança:
 
