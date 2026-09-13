@@ -35,8 +35,8 @@ Administradores possuem acesso a ferramentas exclusivas para gerenciamento do co
 ## Preview
 
 ![Home do CBALOL](./docs/images/Home.png)
-![Página de JogadoresL](./docs/images/Jogadores.png.png)
-![Time Las Noches](./docs/images/Home.png)
+![Página de JogadoresL](./docs/images/Jogadores.png)
+![Time Las Noches](./docs/images/Time.png)
 
 ```text
 Home
