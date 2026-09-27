@@ -38,7 +38,7 @@ const port = Number(process.env.PORT) || 8080;
 const startSever = async () => {
   try {
     await conn();
-    app.listen(port, () => {
+    app.listen(port, "0.0.0.0", () => {
       console.log(ck.green(`Servidor ativo na porta ${port}`));
     });
   } catch (error) {
